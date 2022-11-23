@@ -73,7 +73,7 @@ class AWSNestedStacks {
         const tags = []
         stack.tags = ref.self.mergeArray(stack.tags)
         for (const property in stack.tags) {
-            if (!!Object.getOwnPropertyDescriptor(stack.tags, property)) {
+            if (!Object.getOwnPropertyDescriptor(stack.tags, property)) {
                 const newTag = {}
                 newTag.Key = property
                 newTag.Value = stack.tags[property]
