@@ -35,8 +35,7 @@
     },
     "scripts": {
         "test": "ava --verbose",
-        "cover": "nyc npm test",
-        "publish-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
+        "cover": "nyc --reporter=lcov npm test",
         "jshint": "jshint index.js",
         "eslint": "eslint index.js",
         "quality": "npm run jshint && npm run eslint"

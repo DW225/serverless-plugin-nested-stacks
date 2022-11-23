@@ -42,13 +42,12 @@ jobs:
           node-version: 18
           cache: npm
       - name: Setup project
-        run: npm ci && npm run publish-coverage
+        run: npm ci && npm run cover
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           env_vars: OS,Node
           fail_ci_if_error: true
-          files: ./coverage.lcov
           flags: unittests
           name: codecov-umbrella
           path_to_write_report: ./codecov_report.txt
