@@ -24,18 +24,20 @@
         "eslint": "^8.28.0",
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-node": "^11.0.0",
+        "eslint-plugin-n": "^15.5.1",
         "eslint-plugin-promise": "^6.1.0",
         "jshint": "^2.13.6",
         "nyc": "^15.1.0",
-        "serverless": "^3.25.0"
+        "serverless": "^2.72.0"
+    },
+    "peerDependencies": {
+        "serverless": "1 || 2 || pre-3 || 3"
     },
     "scripts": {
         "test": "ava --verbose",
-        "cover": "nyc npm test",
-        "publish-coverage": "nyc report --reporter=text-lcov > coverage.lcov",
-        "jshint": "node ./node_modules/jshint/bin/jshint index.js",
-        "eslint": "node ./node_modules/eslint/bin/eslint index.js",
+        "cover": "nyc --reporter=lcov npm test",
+        "jshint": "jshint index.js",
+        "eslint": "eslint index.js",
         "quality": "npm run jshint && npm run eslint"
     }
 }
