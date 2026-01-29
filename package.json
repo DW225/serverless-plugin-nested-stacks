@@ -28,7 +28,7 @@
         "eslint-plugin-promise": "^6.1.0",
         "jshint": "^2.13.6",
         "nyc": "^15.1.0",
-        "serverless": "^3.25.0"
+        "serverless": "^4.31.2"
     },
     "scripts": {
         "test": "ava --verbose",
